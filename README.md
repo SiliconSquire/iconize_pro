@@ -52,7 +52,7 @@ _(Please verify the exact package names for your specific distribution if unsure
 **Installation Steps:**
 
 1.  **Install System Dependencies:** Run the appropriate command above for your distribution to install the necessary libraries for `cairosvg`.
-2.  **Download Files:** Save the `install.sh` script, the `iconize_pro_gui.py` script, and optionally an `icon.png` (recommended) or `icon.ico` file in the same directory.
+2.  **Download Files:** Save the `install.sh` script, the `iconize_pro.py` script, and optionally an `icon.png` (recommended) or `icon.ico` file in the same directory.
 3.  **Run the Script:** Open a terminal, navigate to the directory containing the downloaded files, and execute the installation script:
     ```bash
     chmod +x install.sh
@@ -86,10 +86,10 @@ For Windows, building a standalone executable using PyInstaller is recommended. 
     ```bash
     pip install PyQt6 Pillow cairosvg qdarkstyle pyinstaller
     ```
-4.  **Navigate to Script Directory:** Change directory to where `iconize_pro_gui.py` and `icon.ico` are located.
+4.  **Navigate to Script Directory:** Change directory to where `iconize_pro.py` and `icon.ico` are located.
 5.  **Run PyInstaller:**
     ```bash
-    pyinstaller --onefile --windowed --icon=icon.ico iconize_pro_gui.py
+    pyinstaller --onefile --windowed --icon=icon.ico iconize_pro.py
     ```
     - `--onefile`: Bundle into a single `.exe`.
     - `--windowed`: Prevent console window.
