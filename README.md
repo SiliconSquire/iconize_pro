@@ -35,17 +35,17 @@ This application uses the `cairosvg` library for handling SVG files. `cairosvg` 
 **Common commands to install system dependencies:**
 
 - **Debian/Ubuntu:**
-  \`\`\`bash
+  ```bash
   sudo apt update && sudo apt install libcairo2-dev libpango1.0-dev libgdk-pixbuf2.0-dev pkg-config python3-dev
-  \`\`\`
+  ```
 - **Fedora:**
-  \`\`\`bash
+  ```bash
   sudo dnf install cairo-devel pango-devel gdk-pixbuf2-devel pkgconf-pkg-config python3-devel
-  \`\`\`
+  ```
 - **Arch Linux:**
-  \`\`\`bash
+  ```bash
   sudo pacman -S cairo pango gdk-pixbuf2 pkgconf python
-  \`\`\`
+  ```
 
 _(Please verify the exact package names for your specific distribution if unsure.)_
 
@@ -54,10 +54,10 @@ _(Please verify the exact package names for your specific distribution if unsure
 1.  **Install System Dependencies:** Run the appropriate command above for your distribution to install the necessary libraries for `cairosvg`.
 2.  **Download Files:** Save the `install.sh` script, the `iconize_pro_gui.py` script, and optionally an `icon.png` (recommended) or `icon.ico` file in the same directory.
 3.  **Run the Script:** Open a terminal, navigate to the directory containing the downloaded files, and execute the installation script:
-    \`\`\`bash
+    ```bash
     chmod +x install.sh
     ./install.sh
-    \`\`\`
+    ```
 4.  **Follow Prompts:** The script will guide you through the installation, which includes:
     - Creating an installation directory (`~/.local/share/IconizePro`).
     - Setting up a Python virtual environment.
@@ -70,9 +70,9 @@ _(Please verify the exact package names for your specific distribution if unsure
 **Uninstallation (Linux):**
 
 To remove the application, navigate to the directory where you saved `install.sh` and run:
-\`\`\`bash
+```bash
 ./install.sh --uninstall
-\`\`\`
+```
 
 ### Windows
 
@@ -83,14 +83,14 @@ For Windows, building a standalone executable using PyInstaller is recommended. 
 1.  **Install Python and Pip:** Ensure you have a working Python 3 installation and `pip`.
 2.  **Install GTK+ Runtime (Required for SVG):** This is the most reliable way to provide `cairosvg`'s dependencies on Windows. Download and install the GTK+ all-in-one bundle for Windows from a reputable source (e.g., MSYS2 often provides this, or search for GTK Windows installers). **Crucially, ensure the GTK `bin` directory is added to your system's PATH environment variable** so `cairosvg` can find the necessary DLLs. Verify the installation by opening a _new_ Command Prompt and trying a command like `cairo-version`.
 3.  **Install Python Dependencies:** Open a Command Prompt or PowerShell (after setting up GTK+ in PATH) and install the required Python packages:
-    \`\`\`bash
+    ```bash
     pip install PyQt6 Pillow cairosvg qdarkstyle pyinstaller
-    \`\`\`
+    ```
 4.  **Navigate to Script Directory:** Change directory to where `iconize_pro_gui.py` and `icon.ico` are located.
 5.  **Run PyInstaller:**
-    \`\`\`bash
+    ```bash
     pyinstaller --onefile --windowed --icon=icon.ico iconize_pro_gui.py
-    \`\`\`
+    ```
     - `--onefile`: Bundle into a single `.exe`.
     - `--windowed`: Prevent console window.
     - `--icon=icon.ico`: Specify your icon.
